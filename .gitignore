@@ -1,10 +1,11 @@
 node_modules
 backend/userservice/.env
 backend/itemservice/.env
-
+backend/.env
 backend/userservice/node_modules
 backend/itemservice/node_modules
-
+backend/k8s/.env
+backend/k8s/secret.env
 frontend/node_modules
 frontend/src/config.json
 
