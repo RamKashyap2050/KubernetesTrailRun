@@ -30,7 +30,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/users/register`, {
+      const response = await axios.post(`${import.meta.env.REACT_APP_USER_SERVICE_URL}/users/register`, {
         username : formData.username,
         email: formData.email,
         password: formData.password,

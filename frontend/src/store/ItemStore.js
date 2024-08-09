@@ -10,7 +10,7 @@ const useItemStore = create((set) => ({
     })),
   fetchItems: async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_ITEMS_SERVICE_URL}/items/getitems`, {
+      const response = await axios.get(`${import.meta.env.REACT_APP_ITEMS_SERVICE_URL}/items/getitems`, {
         withCredentials: true,
       });
       set({ items: response.data });
@@ -21,7 +21,7 @@ const useItemStore = create((set) => ({
   createItem: async (userId, formData) => {
     try {
       const requestData = { ...formData, user_id: userId };
-      await axios.post(`${process.env.REACT_APP_ITEMS_SERVICE_URL}/items/create`, requestData, {
+      await axios.post(`${import.meta.env.REACT_APP_ITEMS_SERVICE_URL}/items/create`, requestData, {
         withCredentials: true,
       });
       set((state) => ({ items: [...state.items, requestData] }));
