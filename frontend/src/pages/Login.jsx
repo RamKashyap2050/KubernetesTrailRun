@@ -22,7 +22,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.VITE_APP_USER_SERVICE_URL}/users/login`, {
+      const response = await axios.post(`/users/login`, {
         email: formData.email,
         password: formData.password,
       }, {
